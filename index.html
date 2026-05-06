@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adham Platform</title>
+
+<style>
+body{
+  margin:0;
+  background:#020617;
+  color:white;
+  text-align:center;
+  font-family:Tahoma;
+}
+
+/* عنوان */
+.glow{
+  margin-top:20px;
+  font-size:20px;
+  text-shadow:0 0 15px #00f7ff;
+}
+
+/* كلام فوق */
+.top-text{
+  font-size:13px;
+  opacity:0.8;
+  margin:10px 20px;
+}
+
+/* صور هكر */
+.hackers{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  margin:25px;
+}
+.hackers img{
+  width:70px;
+  height:70px;
+  border-radius:12px;
+  box-shadow:0 0 10px #00f7ff;
+}
+
+/* اسم المطور */
+.dev{
+  font-size:18px;
+  margin:10px;
+  letter-spacing:2px;
+  color:#00f7ff;
+  animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+  from{ text-shadow:0 0 5px #00f7ff;}
+  to{ text-shadow:0 0 20px #00f7ff;}
+}
+
+/* الأزرار */
+.btn{
+  display:block;
+  width:85%;
+  margin:12px auto;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:#0ea5e9;
+  color:white;
+  font-size:14px;
+  box-shadow:0 0 10px #0ea5e9;
+  cursor:pointer;
+}
+
+/* البوكس */
+.box{
+  display:none;
+  background:#111827;
+  padding:12px;
+  border-radius:12px;
+  width:85%;
+  margin:10px auto;
+  font-size:13px;
+  box-shadow:0 0 15px #00f7ff;
+}
+
+/* واتساب */
+.whatsapp{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+  background:#25D366;
+  padding:12px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+/* كلام تحت */
+.desc{
+  margin:30px 20px;
+  font-size:12px;
+  line-height:1.8;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<h2 class="glow">✨ منصة أدهم الاحترافية ✨</h2>
+
+<div class="top-text">
+🔥 أفضل منصة لتشغيل البوتات والسيرفرات بأعلى جودة  
+⚡ سرعة - استقرار - دعم مستمر  
+</div>
+
+<!-- صور هكر -->
+<div class="hackers">
+  <img src="https://i.imgur.com/9yG3K0D.jpg">
+  <img src="https://i.imgur.com/Zb6Zp7F.jpg">
+  <img src="https://i.imgur.com/e4QJ5vX.jpg">
+</div>
+
+<p class="dev">👑 𝘼𝘿𝙃𝘼𝙈 | 𝙎𝙀𝙍𝙑𝙀𝙍 𝙈𝘼𝙎𝙏𝙀𝙍 👑</p>
+
+<button class="btn" onclick="toggle('bots')">🤖 بوتات واتس</button>
+<button class="btn" onclick="toggle('crash')">💀 بوتات كراش</button>
+<button class="btn" onclick="toggle('channels')">📺 القنوات</button>
+<button class="btn" onclick="toggle('prices')">💰 الأسعار</button>
+<button class="btn" onclick="toggle('devbox')">👨‍💻 المطور</button>
+
+<!-- بوتات -->
+<div class="box" id="bots">
+جروب 1 - جروب 2
+</div>
+
+<!-- كراش -->
+<div class="box" id="crash">
+<button class="btn" onclick="openLink('https://t.me/hfggbjbot')">كراش 1</button>
+<button class="btn" onclick="openLink('https://t.me/GAZARA_B_BOT')">كراش 2</button>
+<button class="btn" onclick="openLink('https://t.me/A_d_h_a_m3bot')">كراش 3</button>
+</div>
+
+<!-- قنوات -->
+<div class="box" id="channels">
+قنوات واتس + تيليجرام
+</div>
+
+<!-- أسعار -->
+<div class="box" id="prices">
+💻 السيرفرات المحددة: 30 - 70  
+⚡ غير المحدد: 80 (أفضل)  
+🤖 البوتات: تبدأ من 200 لـ 450  
+</div>
+
+<!-- المطور -->
+<div class="box" id="devbox">
+📞 شراء: 201014962157 <br>
+📞 تفاصيل: 201090656418 <br>
+📞 احتياطي: 201551179084 <br>
+💬 تيليجرام: @amom12358
+</div>
+
+<div class="desc">
+🚀 منصة متكاملة لإدارة وتشغيل البوتات  
+🔥 نقدم لك أفضل أداء وسيرفرات قوية  
+⚡ دعم مستمر وتحديثات دائمة  
+👑 خبرة كبيرة في المجال  
+</div>
+
+<div class="whatsapp" onclick="openLink('https://wa.me/201014962157')">📞</div>
+
+<script>
+function toggle(id){
+  document.querySelectorAll('.box').forEach(b => b.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+function openLink(link){
+  window.open(link,"_blank");
+}
+</script>
+
+</body>
+</html>
