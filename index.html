@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adham Platform</title>
+
+<style>
+body{
+  margin:0;
+  background:linear-gradient(#020617,#020617,#020617);
+  color:white;
+  text-align:center;
+  font-family:Tahoma;
+}
+
+/* عنوان */
+.glow{
+  margin-top:30px;
+  font-size:22px;
+  text-shadow:0 0 15px #00f7ff;
+}
+
+/* الصور */
+.hackers{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin:30px;
+}
+.hackers img{
+  width:80px;
+  height:80px;
+  border-radius:15px;
+  box-shadow:0 0 15px #00f7ff;
+}
+
+/* المطور */
+.dev{
+  font-size:20px;
+  margin:10px;
+  color:#00f7ff;
+  text-shadow:0 0 10px #00f7ff;
+}
+
+/* الأزرار */
+.btn{
+  display:block;
+  width:85%;
+  margin:15px auto;
+  padding:14px;
+  border:none;
+  border-radius:15px;
+  background:#0ea5e9;
+  color:white;
+  box-shadow:0 0 15px #0ea5e9;
+  cursor:pointer;
+  transition:0.3s;
+}
+.btn:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 30px #00f7ff;
+}
+
+/* البوكس */
+.box{
+  display:none;
+  background:#111827;
+  padding:15px;
+  border-radius:15px;
+  width:85%;
+  margin:auto;
+  box-shadow:0 0 20px #00f7ff;
+}
+
+/* واتساب ثابت */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:20px;
+  box-shadow:0 0 20px #25D366;
+  cursor:pointer;
+}
+
+/* نص تحت */
+.desc{
+  margin:30px;
+  font-size:14px;
+  opacity:0.8;
+}
+</style>
+</head>
+
+<body>
+
+<h2 class="glow">✨ منصة أدهم الاحترافية ✨</h2>
+
+<div class="hackers">
+  <img src="https://i.imgur.com/zYxDCQT.png">
+  <img src="https://i.imgur.com/zYxDCQT.png">
+  <img src="https://i.imgur.com/zYxDCQT.png">
+</div>
+
+<p class="dev">⚡ ADHAM DEV ⚡</p>
+
+<button class="btn" onclick="toggle('bots')">🤖 بوتات واتس</button>
+
+<button class="btn" onclick="toggle('crash')">💀 بوتات كراش</button>
+
+<button class="btn" onclick="toggle('channels')">📺 القنوات</button>
+
+<button class="btn" onclick="toggle('prices')">💰 أسعار السيرفرات والبوتات</button>
+
+<button class="btn" onclick="toggle('devbox')">👨‍💻 المطور</button>
+
+<!-- الأسعار -->
+<div class="box" id="prices">
+<p>
+💻 السيرفرات:<br><br>
+يا قلبي أدهم ❤️ السيرفرات المحددة تبدأ من 30 لـ 70 جنيه 🔥<br>
+أما السيرفر غير المحدد (سريع بدون تقطيع) بـ 80 جنيه ⚡<br>
+لو مبتدئ خذ المحدد 👍<br>
+لو محترف خذ غير المحدد 👑<br><br>
+
+🤖 البوتات:<br>
+متوفر بوتات تبدأ من 200 جنيه 💰<br>
+وأعلى بوت 450 جنيه مع سيرفراته 🚀
+</p>
+</div>
+
+<!-- باقي -->
+<div class="box" id="bots">
+<button class="btn" onclick="openLink('https://chat.whatsapp.com/KC8Q6P7Z9RI25uGYHMMMV3')">جروب 1</button>
+<button class="btn" onclick="openLink('https://chat.whatsapp.com/K5oCXsm3AvuLezbArdHOa2')">جروب 2</button>
+</div>
+
+<div class="box" id="crash">
+<button class="btn" onclick="openLink('https://t.me/hfggbjbot')">كراش 1</button>
+<button class="btn" onclick="openLink('https://t.me/GAZARA_B_BOT')">كراش 2</button>
+</div>
+
+<div class="box" id="channels">
+<button class="btn" onclick="openLink('https://t.me/D_l_L_s_k_H_6')">تيليجرام</button>
+</div>
+
+<div class="box" id="devbox">
+<button class="btn" onclick="openLink('https://wa.me/201014962157')">تواصل واتساب</button>
+</div>
+
+<!-- وصف -->
+<div class="desc">
+🚀 منصة متكاملة لتقديم أفضل خدمات البوتات والسيرفرات بأعلى جودة وسرعة  
+🔥 نضمن لك استقرار وتشغيل 24/7 بدون مشاكل  
+💻 خبرة في تطوير البوتات وإدارة السيرفرات  
+⚡ كل الخدمات بإدارة المطور أدهم باحترافية عالية  
+👑 هدفنا نقدم لك أفضل تجربة في المجال
+</div>
+
+<!-- واتساب -->
+<div class="whatsapp" onclick="openLink('https://wa.me/201014962157')">
+📞
+</div>
+
+<script>
+function toggle(id){
+  document.querySelectorAll('.box').forEach(b => b.style.display="none");
+  document.getElementById(id).style.display="block";
+}
+
+function openLink(link){
+  window.open(link, "_blank");
+}
+</script>
+
+</body>
+</html>
